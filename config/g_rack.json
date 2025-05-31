@@ -32,6 +32,11 @@
         "beam": "96_beam.obj",
         "span": 96, 
         "levels": [18,36,54,70]
+      },
+      {
+        "beam": "96_beam.obj",
+        "span": 96, 
+        "levels": [18,36,54,70]
       }
     ]
 }
