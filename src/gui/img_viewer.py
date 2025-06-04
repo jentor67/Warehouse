@@ -21,7 +21,7 @@ def new_warehouse_window():
     file_menu.add_command(label="New", command=new_warehouse_window)
     file_menu.add_command(label="Open", command=do_something)
     file_menu.add_separator()
-    file_menu.add_command(label="Exit", command=root.quit)
+    file_menu.add_command(label="Exit", command=new_window.destroy)
     menu_bar.add_cascade(label="File", menu=file_menu)
 
     new_window.config(menu=menu_bar)
@@ -29,7 +29,7 @@ def new_warehouse_window():
     # Add widgets to the new window
     label = tk.Label(new_window, text="This is a new window.")
     label.pack(padx=20, pady=20)
-        
+    
 
 # create root window
 root = Tk()
