@@ -6,25 +6,21 @@ class Warehouse:
     def __init__():
         self.json_object = json.loads('{ }')
         self.name = ''
-
-    class Rack:
-        def __init__():
-            self.name=""
-
+        self.descriptione=""
 
     class Bay:
         def __init__():
             self.number=0
 
+    class Bin:
+        def __init__():
+            self.number=0
 
     class Row:
         def __init__():
             self.number=0
 
-
-    class Bin:
+    class Rack:
         def __init__():
-            self.number=0
-
-
+            self.name=""
 

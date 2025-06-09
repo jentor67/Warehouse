@@ -6,7 +6,8 @@ class Menu:
     def __init__(self,window, json_object, mW):
         self.window = window
         self.json_object = json_object
-
+        self.WarehouseName = ''
+        self.WarehouseDescription = ''
         self.display_menu()
         self.mW= mW
         self.mW.name= 'john'
@@ -14,6 +15,7 @@ class Menu:
     class WarehouseAttributes:
         def __init__(self):
             self.Name = '' 
+            self.Description = '' 
 
     def display_menu(self):
         
@@ -66,11 +68,12 @@ class Menu:
             
     def do_something(self):
         print("New warehouse name")
-        print(self.mW.name)
+        print(self.mW.name, self.mW.description)
    
 
-    def add_name_of_warehouse(self, window, Name):
-        self.mW.name= Name.get("1.0", "end-1c") #Warehouse Name
+    def add_name_of_warehouse(self, window):
+        self.mW.name = self.WarehouseName.get("1.0", "end-1c") #Warehouse Name
+        self.mW.description = self.WarehouseDescription.get("1.0", "end-1c") #Warehouse Name
         window.destroy()
 
 
@@ -94,12 +97,16 @@ class Menu:
         labelWarehouseName.pack(padx=20, pady=20)
    
         # create text box of warehouse name
-        WarehouseName = tk.Text(new_window, height=1, width=30)
-        WarehouseName.pack()
+        self.WarehouseName = tk.Text(new_window, height=1, width=30)
+        self.WarehouseName.pack()
+   
+        # create text box of warehouse name
+        self.WarehouseDescription = tk.Text(new_window, height=1, width=30)
+        self.WarehouseDescription.pack()
    
         # create button to update name
         button = tk.Button(new_window, text="Click Me", 
-                command = lambda:self.add_name_of_warehouse( new_window, WarehouseName) )
+                command = lambda:self.add_name_of_warehouse( new_window) )
         button.pack()
 
 
