@@ -13,7 +13,6 @@ def testButton():
 
 
 myWarehouse = warehousemodule.Warehouse
-myWarehouse.name = ''
 
 with open('/home/jmajor/Git/Warehouse/config/g_rack.json','r') as file:
     g_rack = json.load(file)

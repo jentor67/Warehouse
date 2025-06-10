@@ -6,8 +6,8 @@ class Menu:
     def __init__(self, window, json_object, mW):
         self.window = window
         self.json_object = json_object
-        self.WarehouseName = ''
-        self.WarehouseDescription = ''
+        self.WarehouseNameTextBox = ''
+        self.WarehouseDescriptionTextBox = ''
         self.display_menu()
         self.mW= mW
 
@@ -30,7 +30,9 @@ class Menu:
                 command = lambda: self.save_json_file(self.json_object) )
         file_menu.add_command(label="Open", 
                 command = lambda: self.open_json_file(self.json_object) )
+
         file_menu.add_separator()
+
         file_menu.add_command(label="Exit", command=self.window.quit)
        
         menu_bar.add_cascade(label="File",menu=file_menu)
@@ -69,8 +71,10 @@ class Menu:
    
 
     def add_name_of_warehouse(self, window):
-        self.mW.name = self.WarehouseName.get("1.0", "end-1c") #Warehouse Name
-        self.mW.description = self.WarehouseDescription.get("1.0", "end-1c") #Warehouse Name
+        # Warehouse name
+        self.mW.name = self.WarehouseNameTextBox.get("1.0", "end-1c") 
+        # Warehouse Description
+        self.mW.description = self.WarehouseDescriptionTextBox.get("1.0", "end-1c") 
         window.destroy()
 
 
@@ -94,15 +98,20 @@ class Menu:
         labelWarehouseName.pack(padx=20, pady=20)
    
         # create text box of warehouse name
-        self.WarehouseName = tk.Text(new_window, height=1, width=30)
-        self.WarehouseName.pack()
+        self.WarehouseNameTextBox = tk.Text(new_window, height=1, width=30)
+        self.WarehouseNameTextBox.pack()
    
-        labelWarehouseDescription = tk.Label(new_window, text="Warehouse Description")
+        labelWarehouseDescription = tk.Label(
+                new_window, 
+                text="Warehouse Description")
         labelWarehouseDescription.pack(padx=20, pady=20)
    
         # create text box of warehouse name
-        self.WarehouseDescription = tk.Text(new_window, height=1, width=30)
-        self.WarehouseDescription.pack()
+        self.WarehouseDescriptionTextBox = tk.Text(
+                new_window, 
+                height=1, 
+                width=30)
+        self.WarehouseDescriptionTextBox.pack()
    
         # create button to update name
         button = tk.Button(new_window, text="Click Me", 
