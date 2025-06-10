@@ -8,7 +8,12 @@ from tkinter import filedialog
 import json
 
 
+def testButton():
+    print(myWarehouse.name)
+
+
 myWarehouse = warehousemodule.Warehouse
+myWarehouse.name = ''
 
 with open('/home/jmajor/Git/Warehouse/config/g_rack.json','r') as file:
     g_rack = json.load(file)
@@ -20,18 +25,20 @@ rack = json.loads('{ }')
 root = Tk()
 
 # root window title and dimension
-root.title("Welcome to Warehouse Creator")
+root.title("Welcome to Warehouse Creator -- " + myWarehouse.name)
 
 # Set geometry (widthxheight)
 root.geometry('700x400')
 
-myWarehouse.name = 'Anne-marie'
-print(myWarehouse.name)
 # create Menu class
 mainmenu = basicmodule.Menu(root,rack,myWarehouse)
 
-print(myWarehouse.name)
 # add menu to window
 root.config( menu = mainmenu.display_menu())
+
+
+button = tk.Button(root, text="Click Me",
+        command = testButton )
+button.pack()
 
 root.mainloop()

@@ -3,19 +3,19 @@ from tkinter import filedialog
 import json
 
 class Menu:
-    def __init__(self,window, json_object, mW):
+    def __init__(self, window, json_object, mW):
         self.window = window
         self.json_object = json_object
         self.WarehouseName = ''
         self.WarehouseDescription = ''
         self.display_menu()
         self.mW= mW
-        self.mW.name= 'john'
 
     class WarehouseAttributes:
         def __init__(self):
             self.Name = '' 
             self.Description = '' 
+
 
     def display_menu(self):
         
@@ -34,7 +34,6 @@ class Menu:
         file_menu.add_command(label="Exit", command=self.window.quit)
        
         menu_bar.add_cascade(label="File",menu=file_menu)
-        #self.mW.name='Claude'
 
         return menu_bar
 
@@ -59,11 +58,9 @@ class Menu:
         if file_path:
             with open(file_path, 'r') as file:
                 json_object = json.load(file)
-        print(json_object)
         # Load from string
         json_string = '{"name": "John", "age": 30}'
         json_object = json.loads(json_string)
-        print(json_object)
     
             
     def do_something(self):
@@ -93,12 +90,15 @@ class Menu:
         new_window.config(menu=menu_bar)
     
         # Add widgets to the new window
-        labelWarehouseName = tk.Label(new_window, text="Put in warehouse name")
+        labelWarehouseName = tk.Label(new_window, text="Warehouse name")
         labelWarehouseName.pack(padx=20, pady=20)
    
         # create text box of warehouse name
         self.WarehouseName = tk.Text(new_window, height=1, width=30)
         self.WarehouseName.pack()
+   
+        labelWarehouseDescription = tk.Label(new_window, text="Warehouse Description")
+        labelWarehouseDescription.pack(padx=20, pady=20)
    
         # create text box of warehouse name
         self.WarehouseDescription = tk.Text(new_window, height=1, width=30)
