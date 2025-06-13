@@ -1,43 +1,28 @@
 #!/usr/bin/python3
-# img_viewer.py
-import basicmodule
 import warehousemodule
-from tkinter import *
+import menumodule
 import tkinter as tk
-from tkinter import filedialog
-import json
-
-
-def testButton():
-    print(myWarehouse.name)
+from tkinter import ttk
 
 
 myWarehouse = warehousemodule.Warehouse
 
-with open('/home/jmajor/Git/Warehouse/config/g_rack.json','r') as file:
-    g_rack = json.load(file)
+class App(tk.Tk):
+    def __init__( self, title, size):
+
+        # main setup
+        super().__init__()
+        self.title( title )
+        self.geometry(f'{size[0]}x{size[1]}')
+        self.minsize( size[0], size[1])
 
 
-rack = json.loads('{ }')
+        # add menu
+        menu_bar = menumodule.Menu(self)
+        self.config( menu = menu_bar)
 
-# create root window
-root = Tk()
-
-# root window title and dimension
-root.title("Welcome to Warehouse Creator -- " + myWarehouse.name)
-
-# Set geometry (widthxheight)
-root.geometry('700x400')
-
-# create Menu class
-mainmenu = basicmodule.Menu(root,rack,myWarehouse)
-
-# add menu to window
-root.config( menu = mainmenu.display_menu())
+        self.mainloop()
 
 
-button = tk.Button(root, text="Click Me",
-        command = testButton )
-button.pack()
 
-root.mainloop()
+App( 'Warehouse Creater', (600,600) )
