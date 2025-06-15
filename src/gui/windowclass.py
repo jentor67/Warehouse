@@ -4,11 +4,11 @@ import tkinter as tk
 
 
 class NewWarehouse(tk.Toplevel):
-    def __init__(self, parent):
+    def __init__(self, parent, theWarehouse):
         super().__init__(parent)
-
+        
         #  create object
-        aw = storemodule.AddWarehouse()
+        aw = storemodule.AddWarehouse(theWarehouse)
         
         new_window = self #tk.Toplevel(self)
         new_window.title("New Warehouse")
@@ -45,7 +45,6 @@ class NewWarehouse(tk.Toplevel):
                 new_window, 
                 text="Click Me", 
                 command = lambda:aw.add_name_of_warehouse( new_window ) )
-                #command = lambda:aw.add_name_of_warehouse( new_window) )
         
         button.pack()
 

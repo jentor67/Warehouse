@@ -18,7 +18,7 @@ class App(tk.Tk):
 
 
         # add menu
-        menu_bar = menumodule.Menu(self)
+        menu_bar = menumodule.Menu(self, myWarehouse)
         self.config( menu = menu_bar)
 
         self.mainloop()
