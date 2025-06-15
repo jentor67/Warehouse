@@ -8,7 +8,7 @@ class NewWarehouse(tk.Toplevel):
         super().__init__(parent)
 
         #  create object
-        aw = storemodule.AddWarehouse
+        aw = storemodule.AddWarehouse()
         
         new_window = self #tk.Toplevel(self)
         new_window.title("New Warehouse")
@@ -41,8 +41,11 @@ class NewWarehouse(tk.Toplevel):
         aw.WarehouseDescriptionTextBox.pack()
    
         # create button to update name
-        button = tk.Button(new_window, text="Click Me", 
-                command = lambda:aw.add_name_of_warehouse( new_window) )
+        button = tk.Button(
+                new_window, 
+                text="Click Me", 
+                command = lambda:aw.add_name_of_warehouse( new_window ) )
+                #command = lambda:aw.add_name_of_warehouse( new_window) )
         
         button.pack()
 
