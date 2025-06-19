@@ -21,11 +21,14 @@ class NewWarehouse(tk.Toplevel):
 
     
         # Add widgets to the new window
-        labelWarehouseName = tk.Label(new_window, text="Warehouse name")
+        labelWarehouseName = tk.Label(new_window, 
+                                      text="Warehouse name")
         labelWarehouseName.pack(padx=20, pady=20)
    
         # create text box of warehouse name
-        aw.WarehouseNameTextBox = tk.Text(new_window, height=1, width=30)
+        aw.WarehouseNameTextBox = tk.Text(new_window, 
+                                          height=1, 
+                                          width=30)
         aw.WarehouseNameTextBox.pack()
    
         labelWarehouseDescription = tk.Label(
@@ -44,7 +47,8 @@ class NewWarehouse(tk.Toplevel):
         button = tk.Button(
                 new_window, 
                 text="Click Me", 
-                command = lambda:aw.add_name_of_warehouse( new_window ) )
+                command = \
+                  lambda:aw.add_name_of_warehouse( new_window ) )
         
         button.pack()
 

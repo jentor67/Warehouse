@@ -10,10 +10,12 @@ class AddWarehouse():
     def add_name_of_warehouse(self,window):
 
         # Warehouse name
-        self.theWarehouse.name = self.WarehouseNameTextBox.get("1.0", "end-1c") 
+        self.theWarehouse.name = \
+          self.WarehouseNameTextBox.get("1.0", "end-1c") 
     
         # Warehouse Description
-        self.theWarehouse.description = self.WarehouseDescriptionTextBox.get("1.0", "end-1c")
+        self.theWarehouse.description = \
+          self.WarehouseDescriptionTextBox.get("1.0", "end-1c")
     
     
         window.destroy()

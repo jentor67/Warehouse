@@ -3,7 +3,7 @@ import json
 
 class Warehouse:
     name =''
-    descriptione=''
+    description=''
     json_object = json.loads('{ }')
 
     class Bay:

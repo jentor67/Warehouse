@@ -13,24 +13,25 @@ class Menu(tk.Menu):
         self.add_cascade( label="File", underline=0, menu=file_menu)
         
         file_menu.add_command(label="New",
-                command= lambda: windowclass.NewWarehouse(parent, theWarehouse) )
+          command= lambda: windowclass.NewWarehouse(parent, 
+            theWarehouse) )
         
         file_menu.add_command(label="Do",
-                command= self.do_something() )
+                              command= lambda: self.do_something() )
 
         '''
         file_menu.add_command(label="Save",
-                command = lambda: self.save_json_file(self.json_object) )
+          command = lambda: self.save_json_file(self.json_object) )
         file_menu.add_command(label="Open",
-                command = lambda: self.open_json_file(self.json_object) )
+          command = lambda: self.open_json_file(self.json_object) )
         '''
         file_menu.add_separator()
 
         file_menu.add_command(label="Exit", command=parent.quit)
 
 
-    def do_something():
-        print(self.WH.name)
+    def do_something(self):
+        print(self.WH.name, self.WH.description)
 
 
 
