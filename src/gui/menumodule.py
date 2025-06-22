@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import tkinter as tk
 import windowclass
+import actionmodule as am
 
 class Menu(tk.Menu):
     def __init__(self, parent, theWarehouse):
@@ -18,13 +19,13 @@ class Menu(tk.Menu):
         
         file_menu.add_command(label="Do",
                               command= lambda: self.do_something() )
-
-        '''
+        
         file_menu.add_command(label="Save",
-          command = lambda: self.save_json_file(self.json_object) )
+          command = lambda: am.save_json_file(theWarehouse) )
+
         file_menu.add_command(label="Open",
-          command = lambda: self.open_json_file(self.json_object) )
-        '''
+          command = lambda: am.open_json_file(self.json_object) )
+        
         file_menu.add_separator()
 
         file_menu.add_command(label="Exit", command=parent.quit)
