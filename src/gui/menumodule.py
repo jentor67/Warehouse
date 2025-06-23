@@ -24,7 +24,7 @@ class Menu(tk.Menu):
           command = lambda: am.save_json_file(theWarehouse) )
 
         file_menu.add_command(label="Open",
-          command = lambda: am.open_json_file(self.json_object) )
+          command = lambda: am.open_json_file(theWarehouse) )
         
         file_menu.add_separator()
 
