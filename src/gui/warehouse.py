@@ -25,4 +25,4 @@ class App(tk.Tk):
 
 
 
-App( 'Warehouse Creater', (600,600) )
+App( 'Warehouse Creater ' + myWarehouse.name, (600,600) )
