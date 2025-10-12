@@ -1,10 +1,10 @@
-# Blender 4.0.2 MTL File: 'VerticleFrame.blend'
+# Blender 4.5.3 LTS MTL File: '96_beam.blend'
 # www.blender.org
 
 newmtl Material.001
 Ns 250.000000
 Ka 1.000000 1.000000 1.000000
-Kd 0.137011 0.715507 0.721998
+Kd 0.223847 0.027008 0.010546
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
