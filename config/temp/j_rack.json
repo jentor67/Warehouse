@@ -1,0 +1,38 @@
+{
+    "name": "J",
+    "frame": "VerticleFrame.obj",
+    "x":396,
+    "y":0,
+    "notch_spacing": 2,
+    "notch_bottom": 1.5,
+    "vbeam_width": 3,
+    "depth": 48,
+    "bays": [
+      {
+        "beam": "96_beam.obj",
+        "span": 96, 
+        "levels": [10,20,30,40,50,60,70]
+      },
+      {
+        "beam": "96_beam.obj",
+        "span": 96, 
+        "levels": [10,20,30,40,50,60,70]
+      },
+      {
+        "beam": "96_beam.obj",
+        "span": 96, 
+        "levels": [10,20,30,40,50,60,70]
+      },
+      {
+        "beam": "96_beam.obj",
+        "span": 96, 
+        "levels": [10,20,30,40,50,60,70]
+      },
+      {
+        "beam": "96_beam.obj",
+        "span": 96, 
+        "levels": [10,20,30,40,50,60,70]
+      }
+    ]
+}
+
