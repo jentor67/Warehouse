@@ -1,7 +1,7 @@
 {
     "name": "E02",
     "frame": "VerticleFrame.obj",
-    "x":60,
+    "x":0,
     "y":0,
     "notch_spacing": 2,
     "notch_bottom": 1.5,
