@@ -67,6 +67,7 @@ bpy.ops.wm.obj_export(
     filepath= str(output_path),
     export_selected_objects=True
 )
+bpy.context.object.name = "NewName"
 
 print("OBJ exported:", output_path)
 
