@@ -4,7 +4,9 @@ import math
 import os
 
 directory = os.path.dirname(bpy.data.filepath)
-
+directory = os.path.dirname(os.path.abspath(__file__))
+print("Hello function")
+print(directory)
 def scale_in(value1):
     a = value1/39.37
     
@@ -13,12 +15,16 @@ def scale_in(value1):
 
 def place_racks_json(rack):
 
+    objDirectory = '/home/jmajor/Git/Warehouse/objects/'
+
     vbeam =[]
     for n in range( len(rack['bays']) ):
 
         # verticle beam
-        bpy.ops.wm.obj_import( filepath = os.path.join(directory + \
-          "/objects",rack['frame'] ))
+        bpy.ops.wm.obj_import( 
+            filepath = os.path.join(objDirectory, 
+            rack['frame'] ))
+
 
         vbeam =bpy.context.active_object
 
@@ -33,7 +39,7 @@ def place_racks_json(rack):
             for k in range(2):
 
                 bpy.ops.wm.obj_import( filepath = os.path.join(\
-                  directory + "/objects", rack['bays'][n]['beam'] ) )
+                  objDirectory, rack['bays'][n]['beam'] ) )
 
                 beam1 = bpy.context.active_object
 
@@ -56,8 +62,8 @@ def place_racks_json(rack):
 
 
     # verticale beam
-    bpy.ops.wm.obj_import( filepath = os.path.join(directory + \
-      "/objects",  rack['frame'] ) )
+    bpy.ops.wm.obj_import( filepath = os.path.join(\
+      objDirectory,  rack['frame'] ) )
     vbeam = bpy.context.active_object
     vbeam.location = \
       (

@@ -6,13 +6,14 @@ import sys
 from pathlib import Path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-#sys.path.append('/path/to/your/script/folder')
 # import functions.py
 import functions as fun
 import importlib
 importlib.reload(fun) # reload
+
+
 # Command line
-#  blender --background --python createrack.py
+#  blender --background --python createrack.py -- <configFile>
 # -------------------------------------------------
 
 
@@ -23,20 +24,26 @@ bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete()
 
 
+# -----------------------------------------------
+# read in argument
+# ----------------------------------------------
+argv = sys.argv
+argv = argv[argv.index("--") + 1:]  # everything after --
+configFile = argv[0]
+configFileName = Path(argv[0]).stem
+
+
 directory = os.path.dirname(os.path.abspath(__file__))
-print("Hello")
-print(directory)
+configDirectory = str(Path(directory).parent) + '/config'
+objectDirectory = str(Path(directory).parent) + '/object'
+outputDirectory = Path('/mnt/kdrive/warehouse/objects')
 
+jsonFile = configDirectory + '/' + configFile 
 
-#with open(directory + '../config/e03_rack.json','r') as file:
-with open('../config/e01_rack.json','r') as file:
+with open(jsonFile,'r') as file:
     rack = json.load(file)
 
 fun.place_racks_json(rack)
-
-
-# Output OBJ path
-#output_path = directory + '../objects/E01.obj'
 
 # Deselect everything
 bpy.ops.object.select_all(action='DESELECT')
@@ -54,16 +61,12 @@ bpy.context.view_layer.objects.active = mesh_objects[0]
 bpy.ops.object.join()
 
 # Export the joined object
+outputFile = configFileName + '.obj'
+output_path = outputDirectory / outputFile
 bpy.ops.wm.obj_export(
-    filepath=directory + 'E01.obj',
+    filepath= str(output_path),
     export_selected_objects=True
 )
 
 print("OBJ exported:", output_path)
-
-
-
-
-
-
 
