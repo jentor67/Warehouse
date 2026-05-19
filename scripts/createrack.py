@@ -45,6 +45,7 @@ with open(jsonFile,'r') as file:
 
 fun.place_racks_json(rack)
 
+objectName = rack['name']
 # Deselect everything
 bpy.ops.object.select_all(action='DESELECT')
 
@@ -60,6 +61,8 @@ bpy.context.view_layer.objects.active = mesh_objects[0]
 # Join all selected meshes into one object
 bpy.ops.object.join()
 
+bpy.context.object.name = objectName
+
 # Export the joined object
 outputFile = configFileName + '.obj'
 output_path = outputDirectory / outputFile
@@ -67,7 +70,6 @@ bpy.ops.wm.obj_export(
     filepath= str(output_path),
     export_selected_objects=True
 )
-bpy.context.object.name = "NewName"
 
 print("OBJ exported:", output_path)
 
