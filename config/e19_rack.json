@@ -52,26 +52,6 @@
         "beam": "144_beam.obj",
         "span": 144, 
         "levels": [22,54]
-      },
-      {
-        "beam": "144_beam.obj",
-        "span": 144, 
-        "levels": [22,54]
-      },
-      {
-        "beam": "144_beam.obj",
-        "span": 144, 
-        "levels": [22,54]
-      },
-      {
-        "beam": "144_beam.obj",
-        "span": 144, 
-        "levels": [22,54]
-      },
-      {
-        "beam": "144_beam.obj",
-        "span": 144, 
-        "levels": [22,54]
       }
     ]
 }

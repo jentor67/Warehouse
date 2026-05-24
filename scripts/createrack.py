@@ -3,6 +3,7 @@ import bpy
 import os
 import json
 import sys
+import platform
 from pathlib import Path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,6 +24,21 @@ importlib.reload(fun) # reload
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete()
 
+# -----------------------
+# add windows
+#-----------------------
+
+
+
+current_os = platform.system()
+
+outputDirectory=''
+if current_os == "Windows":
+    outputDirectory = Path('C:/Users/johnj/OneDrive/Documents/kdrive/objects')
+elif current_os == "Linux":
+    outputDirectory = Path('/mnt/kdrive/warehouse/objects')
+elif current_os == "Darwin":
+    print("Running on macOS")
 
 # -----------------------------------------------
 # read in argument
@@ -36,7 +52,7 @@ configFileName = Path(argv[0]).stem
 directory = os.path.dirname(os.path.abspath(__file__))
 configDirectory = str(Path(directory).parent) + '/config'
 objectDirectory = str(Path(directory).parent) + '/object'
-outputDirectory = Path('/mnt/kdrive/warehouse/objects')
+
 
 jsonFile = configDirectory + '/' + configFile 
 

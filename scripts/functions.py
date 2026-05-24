@@ -15,7 +15,16 @@ def scale_in(value1):
 
 def place_racks_json(rack):
 
-    objDirectory = '/home/jmajor/Git/Warehouse/objects/'
+    import platform
+
+
+    current_os = platform.system()
+    if current_os == "Windows":
+        objDirectory = 'C:/Users/johnj/OneDrive/Documents/GitHub/Warehouse/objects'
+    elif current_os == "Linux":
+        objDirectory = '/home/jmajor/Git/Warehouse/objects/'
+    elif current_os == "Darwin":
+        print("Running on macOS")
 
     vbeam =[]
     for n in range( len(rack['bays']) ):

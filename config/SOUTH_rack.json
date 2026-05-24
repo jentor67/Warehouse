@@ -1,0 +1,328 @@
+{
+    "name": "SOUTH",
+    "frame": "VerticleFrame.obj",
+    "x":0,
+    "y":0,
+    "notch_spacing": 2,
+    "notch_bottom": 1.5,
+    "vbeam_width": 3,
+    "depth": 48,
+    "bays": [
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      },
+      {
+        "beam": "144_beam.obj",
+        "span": 144, 
+        "levels": [22,54]
+      }
+    ]
+}
+
